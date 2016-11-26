@@ -1,0 +1,272 @@
+@import 'normalise.css';
+@import 'layout';
+@import 'fonts';
+
+$dark-color: #222222;
+
+
+
+@mixin lato {
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+}
+@mixin rale {
+	font-family: Raleway, sans-serif;
+	font-weight: 700;
+}
+
+
+a, button, .ba-btn {transition: all 0.2s ease-in;}
+
+body {
+
+	@include lato;
+	font-weight: 400;
+	font-size: 22px;
+	color: #FFF;
+/* 	line-height: 1.364;
+letter-spacing: 0.05em; */
+}
+
+.ba-container {padding-top: 50px;}
+.ba-header {
+	background: url(../images/bg_header.png) 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+
+
+	&__title1 {
+		margin: 0 auto;
+		width: 55%;
+		position: relative;
+		text-align: center;
+		margin-top: 250px;
+		color: #FFF;
+		text-transform: uppercase;
+		@include rale;
+		text-size: 48px;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 90px;
+			height: 2px;
+			background-color: #fff;
+			top: 200%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__txt {
+		width: 55%;
+		margin: 100px auto 0;
+		text-align: center;
+		line-height: 1.36;
+		letter-spacing: 0.05em;
+	}
+	&__slider {
+		display: inline-block;
+		margin-top: 250px;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		padding-bottom: 50px;
+	}
+}
+
+.ba-logo {
+	float: left;
+	&:hover {zoom:1.1;}
+}
+
+.ba-nav {
+	float: right;
+	&__list {list-style: none;
+		margin: 0;
+	}
+	&__item {
+		display: inline-block;
+		margin: 0;
+		@include rale;
+		&+& {margin-left: 50px;}
+	}
+	&__link {
+		text-decoration: none;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #FFF;
+		&:hover {color: blue;}
+	}
+}
+
+/* STYLES FOR MAIN  */
+
+.ba-title2 {
+	position: relative;
+	@include rale;
+	font-size: 35px;
+	color: $dark-color;
+	text-transform: uppercase;
+	&:after {
+		content: '';
+		position: absolute;
+		width: 90px;
+		height: 2px;
+		background-color: $dark-color;
+		top: 200%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+}
+
+.ba-services {
+	&__grid {
+		text-align: center;
+		color: $dark-color;}
+		font-size: 15px;
+		line-height: 1.875;
+		&__title {
+
+			letter-spacing: 0.01em;
+			font-size: 24px;
+		}
+	}
+
+	/* STYLES for ba-work */
+	.ba-work {
+		background: url(../images/bg_main1.png) 50% 0 no-repeat;
+		&__wrap {margin-top: 105px;}
+		&__txt {
+			display: inline-block;
+			width: 55%;
+			text-align: left;
+			margin-top: 70px;
+		}
+		&__title {
+			@include lato;
+			font-size: 45.08px;
+			letter-spacing: .04em;
+			text-transform: uppercase;
+
+		}
+		&__link {
+			display: inline-block;
+			margin-top: 74px;
+			color: #FFF;
+			@include lato;
+			font-size: 18px;
+		}
+		&__grid {margin-top: 170px;}
+		&__btn {
+			width: 370px;
+			height: 60px;
+			color: $dark-color;
+			border: 3px solid $dark-color;
+			margin-top: 75px;
+			background-color: #FFF;
+			font-size: 24px;
+			text-transform: uppercase;
+			&:hover {background-color: grey;}
+			margin-bottom: 75px;
+		}
+	}
+
+
+
+	/* STYLES for FOOTER */
+
+	.ba-title2__white {
+
+		position: relative;
+		@include rale;
+		font-size: 35px;
+		color: #fff;
+		text-transform: uppercase;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 90px;
+			height: 2px;
+			background-color: #fff;
+			top: 200%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+
+	}
+
+
+	.ba-footer {
+		background: url(../images/bg__foot.png) 0 0 no-repeat;
+		background-size: cover;
+		position: relative;
+
+
+	}
+
+	.ba-sendform {
+
+		margin: 60px auto;
+		&__field {
+			&::-webkit-input-placeholder {
+				text-indent:20px;
+				font-style: italic;
+			}
+			color: #FFF;
+			background: none;
+			border:none;
+			border-bottom: 1px solid #afafaf;
+			width: 300px;
+			&+& {margin-left: 76px;}
+			&--long {
+				&::-webkit-input-placeholder {
+					text-indent:20px;
+					font-style: italic;
+				}
+				color: #FFF;
+				margin-top: 90px;
+				width: 680px;
+				background: none;
+				border:none;
+				border-bottom: 1px solid #afafaf;
+			}
+		}
+
+		&__btn {
+			margin: 44px auto;
+			display: block;
+			padding-bottom: 122px;
+			&--style {
+
+				@include lato;
+				text-transform: uppercase;
+				font-size: 24px;
+				width: 180px;
+				height: 60px;
+				border: 3px solid #fff;
+				background: none;
+				color: #FFF;
+				letter-spacing: 0.04em;
+				&:hover {
+					cursor: pointer;
+					color: blue;
+					border-color: blue;
+				}
+			}
+		}
+
+	}
+	.ba-socials {
+		list-style: none;
+		padding: 0;
+
+		&__link {
+			color: #FFF;
+			&:hover {color: blue;}
+		}
+		&__item {
+			display: inline-block;
+			&+& {margin-left: 25px;}
+		}
+	}
+
